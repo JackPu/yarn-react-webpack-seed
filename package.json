@@ -1,6 +1,6 @@
 {
   "name": "yarn-react-webpack-seed",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "a react seed (router + webpack + react + yarn)",
   "main": "index.js",
   "repository": {
@@ -29,5 +29,6 @@
   },
   "engines": {
     "node": ">=4.0.0",
-  },
+    "npm": ">=3.0.0"
+  }
 }
