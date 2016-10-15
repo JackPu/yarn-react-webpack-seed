@@ -1,0 +1,33 @@
+{
+  "name": "yarn-react-webpack-seed",
+  "version": "0.9.1",
+  "description": "a react seed (router + webpack + react + yarn)",
+  "main": "index.js",
+  "repository": {
+    "url": "https://github.com/JackPu/yarn-react-webpack-seed.git",
+    "type": "git"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --hot --progress --colors",
+    "build": "webpack --progress --colors"
+  },
+  "author": "JackPu <kakashjack@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^15.4.0-rc.4",
+    "react-router": "^2.8.1",
+    "webpack": "^1.13.2"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "history": "^4.3.0",
+    "less-loader": "^2.2.3",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "engines": {
+    "node": ">=4.0.0",
+  },
+}
