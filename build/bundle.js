@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "8606a9951b7e305d69f7"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "9ab8661b0e78f0e773bd"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -8423,7 +8423,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	_reactDom2.default.render(_react2.default.createElement(Links, null), document.getElementById('app'));
+	_reactDom2.default.render(_react2.default.createElement(_app2.default, null), document.getElementById('app'));
 
 	 ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "/Applications/XAMPP/xamppfiles/htdocs/code/yarn-react-webpack-seed/src/index.js"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "/Applications/XAMPP/xamppfiles/htdocs/code/yarn-react-webpack-seed/src/index.js"); } } })();
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(14)))
@@ -30785,6 +30785,8 @@
 	  value: true
 	});
 
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 	var _react = __webpack_require__(78);
 
 	var _react2 = _interopRequireDefault(_react);
@@ -30811,23 +30813,42 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	// components
-	var App = _react2.default.createClass({
-	  displayName: 'App',
-	  render: function render() {
-	    return _react2.default.createElement(
-	      _reactRouter.Router,
-	      { history: _reactRouter.hashHistory },
-	      _react2.default.createElement(
-	        _reactRouter.Route,
-	        { path: '/', component: _links2.default },
-	        _react2.default.createElement(_reactRouter.Route, { path: '/start', component: _start2.default }),
-	        _react2.default.createElement(_reactRouter.Route, { path: '/how', component: _how2.default }),
-	        _react2.default.createElement(_reactRouter.Route, { path: '/guide', component: _guide2.default })
-	      )
-	    );
+
+
+	var App = function (_Component) {
+	  _inherits(App, _Component);
+
+	  function App() {
+	    _classCallCheck(this, App);
+
+	    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
 	  }
-	});
+
+	  _createClass(App, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        _reactRouter.Router,
+	        { history: _reactRouter.hashHistory },
+	        _react2.default.createElement(
+	          _reactRouter.Route,
+	          { path: '/', component: _links2.default },
+	          _react2.default.createElement(_reactRouter.Route, { path: '/start', component: _start2.default }),
+	          _react2.default.createElement(_reactRouter.Route, { path: '/how', component: _how2.default }),
+	          _react2.default.createElement(_reactRouter.Route, { path: '/guide', component: _guide2.default })
+	        )
+	      );
+	    }
+	  }]);
+
+	  return App;
+	}(_react.Component);
 
 	exports.default = App;
 
@@ -36586,7 +36607,7 @@
 	    return _react2.default.createElement(
 	      "div",
 	      { className: "c-home" },
-	      _react2.default.createElement("img", { src: "http://img1.vued.vanthink.cn/vuedd144134a46129d7068d36025d64ba905.png" }),
+	      _react2.default.createElement("img", { alt: "guide", src: "http://img1.vued.vanthink.cn/vuedd144134a46129d7068d36025d64ba905.png" }),
 	      _react2.default.createElement(
 	        "h4",
 	        null,
