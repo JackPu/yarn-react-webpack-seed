@@ -1,29 +1,24 @@
-import React from 'react';  
-import Router from 'react-router';  
-import { DefaultRoute, Link, Route, RouteHandler } from 'react-router';
+import React, { Component } from 'react';
+import { render } from 'react-dom';
+import {  Router, Route, hashHistory } from 'react-router';
+// components
+import Links from './components/links.js';
+import Start from './components/start.js';
+import Guide from './components/guide.js';
+import How from './components/how.js';
 
-import LoginHandler from './components/Login.js';
-
-let App = React.createClass({  
+class App extends Component {
   render() {
     return (
-      <div className="nav">
-        <Link to="app">Home</Link>
-        <Link to="login">Login</Link>
-
-        {/* this is the importTant part */}
-        <RouteHandler/>
-      </div>
+      <Router history={hashHistory}>
+        <Route path="/" component={Links}>
+          <Route path="/start" component={Start}/>
+          <Route path="/how" component={How}/>
+          <Route path="/guide" component={Guide}/>
+        </Route>
+    </Router>  
     );
   }
-});
+}
 
-let routes = (  
-  <Route name="app" path="/" handler={App}>
-    <Route name="login" path="/login" handler={LoginHandler}/>
-  </Route>
-);
-
-Router.run(routes, function (Handler) {  
-  React.render(<Handler/>, document.body);
-});
+export default App;

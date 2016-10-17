@@ -7,6 +7,7 @@ a seed for a react app(yarn + webpack + react + react-router)
 ### Start
 
 ```bash
+git clone https://github.com/JackPu/yarn-react-webpack-seed
 yarn install
 ```
 [How to Use Yarn](https://yarnpkg.com/)
@@ -18,3 +19,11 @@ Of course you can use  `npm install`.It also works well.
 ### Contribute
 
 Please contribute to the project if you think this can be done better in anyway even for this project(😊😄💐)
+
+
+
+
+
+
+
+
