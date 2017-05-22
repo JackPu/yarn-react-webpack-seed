@@ -1,6 +1,6 @@
 {
   "name": "yarn-react-webpack-seed",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "description": "a react seed (router + webpack + react + yarn)",
   "main": "index.js",
   "repository": {
@@ -14,8 +14,8 @@
   "author": "JackPu <kakashjack@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "react": "^15.4.0-rc.4",
-    "react-dom": "^15.3.2",
+    "react": "^15.3.2",
+    "react-dom": "^15.5.4",
     "react-router": "^2.8.1"
   },
   "devDependencies": {
