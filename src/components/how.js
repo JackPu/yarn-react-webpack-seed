@@ -1,20 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-
-let How = React.createClass({ 
-  
+class How extends Component {
   render() {
-    return(
+    return (
       <div>
         <h3>How to Use it</h3>
         <pre>
-git clone https://github.com/JackPu/yarn-react-webpack-seed
+          git clone https://github.com/JackPu/yarn-react-webpack-seed
         </pre>
         <p>Then you could use <code>yarn install</code></p>
         <i>Of course <code>npm install</code> does the same thinkg</i>
       </div>
     );
   }
-});
+}
 
-export default How;  
+export default How;

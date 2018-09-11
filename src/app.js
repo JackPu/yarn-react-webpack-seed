@@ -1,22 +1,26 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
-import {  Router, Route, hashHistory } from 'react-router';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 // components
-import Links from './components/links.js';
-import Start from './components/start.js';
-import Guide from './components/guide.js';
-import How from './components/how.js';
+import Links from './components/links';
+import Start from './components/start';
+import Guide from './components/guide';
+import How from './components/how';
+
 
 class App extends Component {
   render() {
     return (
-      <Router history={hashHistory}>
-        <Route path="/" component={Links}>
-          <Route path="/start" component={Start}/>
-          <Route path="/how" component={How}/>
-          <Route path="/guide" component={Guide}/>
-        </Route>
-    </Router>  
+      <Router>
+        <div>
+          <Links></Links>
+
+          <div className="page main">
+            <Route path="/start" component={Start} />
+            <Route path="/how" component={How} />
+            <Route path="/guide" component={Guide} />
+          </div>
+        </div>
+      </Router>
     );
   }
 }

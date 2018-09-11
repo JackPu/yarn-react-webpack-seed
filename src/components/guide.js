@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-let Guide = React.createClass({ 
+class Guide extends Component {
   render() {
-    return(
+    return (
       <div>
         <h3>This is guide</h3>
         <p><a href="http://www.jackpu.com/shi-yong-yarn-zhi-zuo-ge-webpack-react-chong-zi/">See this article to get more</a></p>
@@ -11,6 +11,6 @@ let Guide = React.createClass({
       </div>
     );
   }
-});
+}
 
-export default Guide;  
+export default Guide;
