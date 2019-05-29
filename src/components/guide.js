@@ -1,16 +1,56 @@
+/* eslint-disable arrow-parens */
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { fetchList, fetchTags } from '../actions/guide';
+
 
 class Guide extends Component {
+
+  componentDidMount() {
+    this.fetchList();
+  }
+
+  fetchList() {
+    const { dispatch } = this.props;
+    dispatch(fetchList());
+    dispatch(fetchTags());
+  }
+
   render() {
+    const { data, tags} = this.props;
+    let movies = null;
+    let tagCom = null;
+    if (tags && tags.length > 0 ) {
+      tagCom = tags.map((item) => {
+        return (
+          <a href="#">{ item }</a>
+        );
+      });
+    }
+    if (data && data.length > 0 ) {
+      movies = data.map((item) => {
+        return (
+          <div>
+            <h3>{item.name}</h3>
+            <p> ✨ {item.rank}</p>
+          </div>
+        );
+      });
+    }
     return (
       <div>
         <h3>This is guide</h3>
-        <p><a href="http://www.jackpu.com/shi-yong-yarn-zhi-zuo-ge-webpack-react-chong-zi/">See this article to get more</a></p>
-        <p><a href="https://github.com/JackPu/yarn-react-webpack-seed">Get this repositories</a></p>
-        <i>Of course <code>npm install</code> does the same thinkg</i>
+        <h4>Redux Test</h4>
+        <p className="tag-list">{ tagCom }</p>
+        { movies }
       </div>
     );
   }
 }
 
-export default Guide;
+const mapStateToProps = (state) => ({
+  data: state['guide']['data'],
+  tags: state['guide']['tags'],
+});
+
+export default connect(mapStateToProps)(Guide);

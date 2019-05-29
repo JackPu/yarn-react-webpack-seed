@@ -2,11 +2,12 @@ const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const plugins = require('./plugins');
 
+const isTestEnv = process.env.NODE_ENV === 'test';
 
 const cssLoader = {
   test: /\.css$/,
   use: [
-    {
+    isTestEnv ? 'style-loader' : {
       loader: MiniCssExtractPlugin.loader,
     },
     {
@@ -25,7 +26,7 @@ const cssLoader = {
 const sassLoader = {
   test: /\.scss$/,
   use: [
-    {
+    isTestEnv ? 'style-loader' : {
       loader: MiniCssExtractPlugin.loader,
     },
     {
