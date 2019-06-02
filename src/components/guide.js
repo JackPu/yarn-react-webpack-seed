@@ -20,17 +20,18 @@ class Guide extends Component {
     const { data, tags} = this.props;
     let movies = null;
     let tagCom = null;
+    console.log('data', data);
     if (tags && tags.length > 0 ) {
       tagCom = tags.map((item) => {
         return (
-          <a href="#">{ item }</a>
+          <a className="tag-item" href="#">{ item }</a>
         );
       });
     }
     if (data && data.length > 0 ) {
       movies = data.map((item) => {
         return (
-          <div>
+          <div className="movie-item">
             <h3>{item.name}</h3>
             <p> ✨ {item.rank}</p>
           </div>
